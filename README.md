@@ -1,11 +1,10 @@
-<h1 align="center">DEV CHALLENGES</h1>
+<h1>Dev Challenges.io</h1>
 
-<div align="center">
+<div>
    Solutions to challenges from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
 </div>
 
-<h1 align="center">FOLDERS IN THE REPO</h1>
-<!-- TABLE OF CONTENTS -->
+<h1>Folders In The Repo</h1>
 
 ## Responsive
 
