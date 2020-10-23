@@ -14,6 +14,6 @@ These are responsive solutions built with HTML, CSS & JAVASCRIPT.
 
 These are solutions built front-end libraries.
 
-- Website [your-website.com](https://{your-web-site-link})
+## Contact
 - GitHub [@your-username](https://{https://github.com/wenadev})
 - Twitter [@your-twitter](https://{https://twitter.com/mawuennaa})
