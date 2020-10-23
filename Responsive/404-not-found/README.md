@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{https://github.com/wenadev/devchallenges-io/tree/main/Responsive/404-not-found}">
+    <a href="https://github.com/wenadev/devchallenges-io/tree/main/Responsive/404-not-found">
       Solution
     </a>
     <span> | </span>
