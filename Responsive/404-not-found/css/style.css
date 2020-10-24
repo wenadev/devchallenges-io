@@ -104,6 +104,12 @@ footer{
 color: #333333;
 }
 
+footer p a{
+    text-decoration: none;
+    color:#FF6D5B;
+    font-weight: bold;
+}
+
   @media only screen and (max-width: 600px) {
   section div.second h3 {
     font-size: 2rem;
