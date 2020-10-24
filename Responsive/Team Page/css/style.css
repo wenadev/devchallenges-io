@@ -4,20 +4,20 @@ html,body{
 }
 
 .root-container{
-    border:1px solid black;
     display: flex;
     flex-direction: column;
-    padding:10px 100px;
+    padding:0 100px;
+    min-height:100vh;
 }
 
 p{margin: 0;}
 
 header{
-    border:1px solid black;
     flex-shrink: 0;
-    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(318px, 1fr));
+    grid-template-rows: ;
+    grid-auto-flow: row;
 }
 
 header div{
@@ -28,13 +28,12 @@ header .creative-text{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    border:1px solid black;
 }
 
 header .creative-text h2{
     font-family: 'PT serif';
     font-weight: bold;
-    font-size:1.5rem;
+    font-size:2rem;
     letter-spacing: -0.1rem;
 }
 
@@ -43,8 +42,6 @@ header .block-of-text{
     flex-direction: column;
     align-items: flex-start;
     font-family: 'Poppins';
-    border:1px solid black;
-
 }
 
 header .block-of-text h4{
@@ -60,29 +57,49 @@ header .block-of-text h4{
     width:80%;
 }
 section{
-    border:1px solid black;
     flex:1 0 auto;
     height:auto;
 }
 
 .media{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    padding:30px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-template-rows: repeat(6, auto);
+    padding:40px;
 }
 
 .media .picture-and-text{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding:5px 20px;
+    padding:5px 0;
+    transition: all 0.3s linear;
+}
+
+.media .picture-and-text:hover{
+    transform: scale(1.1);
 }
 
 .picture-and-text .picture{
-    height:225px;
-    width:170px;
+    height:285px;
+    width:220px;
     display: flex;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+ .picture-and-text .picture img{
+    height:100%;
+    width:100%;
+}
+
+.media .two{
+    margin-top: 80px;
+}
+
+.media .five{
+    margin-top: 80px;
 }
 
 .label{
@@ -102,12 +119,8 @@ section{
     letter-spacing: -0.003rem;
 }
 
-.media .picture-and-text img{
-    height:100%;
-    width:100%;
-}
 
-.picture-and-text .name{ height:10px;width:170px; display:flex; margin: 0 auto;padding: 10px 0}
+.picture-and-text .name{ height:10px;width: 220px; display:flex; margin: 0 auto;padding: 10px 0}
 
 .name span{align-self: start; font-family: 'Poppins'; font-weight: bold; font-size:0.75rem}
 
@@ -125,11 +138,16 @@ footer p{
     margin: 0;
 }
 
+footer p a{
+    text-decoration: none;
+    font-weight: bold;
+    color:#2F80ED;
+}
+
 @media only screen and (max-width: 1299px) and (min-width: 960px ) {
     .media{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-        }
+        grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+    }
 
         .root-container{
             padding:10px 50px;
@@ -137,23 +155,42 @@ footer p{
         }
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1030px) {
     .root-container{
         padding:10px 20px;
     }
 
     .media{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(299px, 1fr));
+    }
+
+    .media .four{
+        margin-top: 80px;
+    }
+
+    .media .five{
+        margin-top: 0;
+    }
+
+    .media .six{
+        margin-top: 80px;
     }
 }
 
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 696px) {
     header .block-of-text{
         align-items: center;
     }
 
     .block-of-text p{
         text-align: center;
+    }
+
+   .media .two, .media .four, .media .six{
+        margin-top: 0;
+    }
+
+    .picture-and-text{
+        margin:30px;
     }
 }
