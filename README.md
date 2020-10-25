@@ -15,5 +15,5 @@ These are responsive solutions built with HTML, CSS & JAVASCRIPT.
 These are solutions built front-end libraries.
 
 ## Contact
-- GitHub [@your-wenadev](https://github.com/wenadev)
+- GitHub [@wenadev](https://github.com/wenadev)
 - Twitter [@mawuennaa](https://twitter.com/mawuennaa)
