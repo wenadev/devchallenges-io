@@ -12,7 +12,7 @@ These are responsive solutions built with HTML, CSS & JAVASCRIPT.
 
 ## Front-End
 
-These are solutions built front-end libraries.
+These are solutions built with front-end libraries.
 
 ## Contact
 - GitHub [@wenadev](https://github.com/wenadev)
