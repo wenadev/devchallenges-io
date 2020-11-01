@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://recipe-page-d6483.web.app/">
+    <a href="https://recipepage-37ce3.web.app">
       Demo
     </a>
     <span> | </span>
