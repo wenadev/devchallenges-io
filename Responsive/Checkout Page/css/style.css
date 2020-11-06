@@ -1,0 +1,309 @@
+html,body{margin: 0; padding:0}
+
+*{box-sizing: border-box;}
+
+.root-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+}
+
+/*Checkout*/
+header{
+    flex-shrink: 0;
+    height:auto;
+    padding:30px 20px 0;
+    align-self: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1300px;
+    text-indent:10px;
+}@media screen and (max-width:700px){
+    header{
+     width:85%;
+    }
+}
+
+header h4{
+    font-size: 25px; 
+    font-weight: 600; 
+    color:#4E5150; 
+    margin: 0;
+}
+
+.checkout-body{
+    flex: 1 0 auto;
+    height:auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 30px 30px 30px;
+}@media screen and (max-width:700px){
+    .checkout-body{
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+}
+
+.checkout-body form{
+    margin: 0; 
+    width:50%;
+    min-height:80%;
+    height: auto;
+}@media screen and (max-width:700px){
+    form{
+        min-width:90%;
+        padding-top: 50px;
+    }
+}
+
+form button{
+    background: #F2994A;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Montserrat';
+    padding:15px 40px ;
+    font-size:14px ;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/*Contact Information and Shipping Address*/
+form h3{font-size: 15px;}
+
+/*Shipping Address*/
+ form h3#shipping{margin-top: 50px; }
+
+form .input-group { 
+    width: 100%; 
+    margin-bottom: 10px; 
+    margin-top: 18px;
+} 
+
+/*Country and Postal code inputs*/
+.input-group.two{display: flex; justify-content: space-between;}
+
+.input-group.two div{width: 47%;}
+
+.input-group label{color:#4F4F4F; font-size: 11px; font-weight: 600;}
+
+/*Checkbox*/
+.input-group.save {display: flex; align-items: center; height:8px;}
+
+.input-group.save label{font-size: 10px; text-indent: 5px;}
+
+
+.input-group span { 
+    position: absolute; 
+} 
+  
+.input-group .icon { 
+    padding: 16.5px 10px; 
+    min-width: 40px; 
+    color: #828282;
+    font-size: 20px;
+} 
+  
+.input-group .input-field { 
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #828282;
+    width: 100%; 
+    padding: 10px; 
+    text-indent: 33px;
+    text-align: left; 
+    border: 1px solid #828282;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 8px;
+    outline: none;
+   
+} 
+
+.input-field::placeholder, select, option{
+    font-family: 'Montserrat';
+   
+    color: #828282;
+    font-weight: 500;
+    font-size: 12px; 
+    font-weight: 600;
+}
+
+select{text-indent: 66px;}
+
+.checkout-body .checkout-summary{
+    width:40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:20px;
+    border-radius:12px;
+    background: #F2F2F2;
+    transition: .2s;
+}@media screen and (min-width:700px) and (max-width:1000px){
+    .checkout-body .checkout-summary{
+        padding: 10px;
+    }
+}@media screen and (max-width:700px){
+    .checkout-body .checkout-summary{
+        width: 90%;
+    }
+}
+
+.summary-details{
+    max-height:30%;
+    height: auto;
+    display: flex;
+    margin: 10px;
+}
+
+.details-content{
+    width:48%; 
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.details-content.image{
+    max-height:160px;
+    max-width:160px;
+    object-position:center; 
+    object-fit: cover;
+    margin-right: 20px;
+}
+.details-content.image img{height:100%; width:100%; border-radius: 16px;}
+
+.content-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+/*Vintage Backbag and Levi Shoes */
+.content-text h4{ 
+    font-size: 13px;
+    color:#4E5150;
+    font-weight:600;
+    margin:0 0 5px;
+}
+
+/*Amount*/
+.content-text p{
+    color:#F2994A;
+    font-size: 13px;
+    font-weight:600; 
+    margin:0; 
+    line-height: 19.5px;
+}
+
+/*striked out amounts*/
+.content-text p span{
+    text-decoration:line-through; 
+    font-size:10px; 
+    color:#4E5150; 
+    font-weight:600; 
+    line-height:14.63px
+}
+
+/*shopping summary*/
+.content-text.amount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-radius: 12px;
+    border: 1px solid #828282;
+}
+
+.content-text.amount .material-icons{
+    font-size: 14px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    color:#828282;
+    padding:5px;
+    cursor: default;
+}
+
+.content-text.amount span:nth-child(2){font-size: 14px; color:#333333; font-weight: 600;}
+
+.summary-details.shipping{
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.summary-details.shipping p, h3{margin: 6px 0; font-weight: 600; font-size: 13px;}
+
+.shipping-details{
+    display: flex; 
+    justify-content: space-between;
+    padding:5px 0;
+    border-top: 1.5px solid #BDBDBD;
+    color: #333333;
+}
+
+/*icons within input field*/
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+
+.input-icons span { 
+    position: absolute; 
+} 
+  
+.icon { 
+    padding: 10px; 
+    min-width: 40px; 
+    cursor: default;
+} 
+  
+.input-field { 
+    width: 100%; 
+    padding: 10px; 
+    text-align: center; 
+} 
+
+/*to remove arrows in phone field input*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+footer{
+    flex-shrink: 0;
+    height: 4vh;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.8rem;
+    border-top: 1px solid #BDBDBD;
+}
+
+footer p{margin: 2px;}
+
+footer p a{
+    margin: 0; 
+    color:#e6af4c; 
+    text-decoration: none;
+}

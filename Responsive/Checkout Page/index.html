@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+        <title>Checkout Page</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <div class="root-container">
+            <header>
+                <h4>Checkout</h4>
+            </header>
+
+            <div class="checkout-body">
+                <form name="personal-information">
+                    <h3>Contact Information</h3>
+
+                    <div class="input-group"> 
+                        <label>E-mail</label><br/>
+                        <span class="material-icons icon">mail</span> 
+                        <input name="input" class="input-field" type="email" placeholder="Enter your email..." required> 
+                    </div>
+
+                    <div class="input-group"> 
+                        <label>Phone</label><br/>
+                        <span class="material-icons icon">phone</span> 
+                        <input name="input" class="input-field" type="tel" placeholder="Enter your phone..." 
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Match this format XXX-XX-XXXX" required> 
+                    </div>
+
+                    <h3 id="shipping">Shipping Address</h3>
+
+                    <div class="input-group"> 
+                        <label>Full name</label><br/>
+                        <span class="material-icons icon">account_circle</span> 
+                        <input name="input" class="input-field" type="text" placeholder="Rodney Cotton" 
+                            pattern="^[A-Za-z -]+$" title="Not valid! Alphabets only" required> 
+                    </div>
+                    
+                    <div class="input-group"> 
+                        <label>Address</label><br/>
+                        <span class="material-icons icon">house</span> 
+                        <input name="input" class="input-field" type="text" placeholder="Your address..." required> 
+                    </div>
+
+                    <div class="input-group"> 
+                        <label>City</label><br/>
+                        <span class="material-icons icon">location_city</span> 
+                        <input name="input" class="input-field" type="text" placeholder="Your city..." 
+                        pattern="^[A-Za-z -]+$" title="Not valid! Alphabets only" required> 
+                    </div>
+
+                    <div class="input-group two"> 
+                        <div>
+                            <label>Country</label><br/>
+                            <span class="material-icons icon">public</span> 
+                            <select name="input" class="input-field" required>
+                                <option value="">Country...</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Togo">Togo</option>
+                                <option value="Benin Republic">Benin Republic</option>
+                                <option value="Cameroon">Cameroon</option>
+                                <option value="Angola">Angola</option>
+                              </select>
+                        </div>
+                        
+                        <div>
+                            <label>Postal code</label><br/>
+                            <span class="material-icons icon">markunread_mailbox</span> 
+                            <input name="input" class="input-field" type="text" placeholder="Your postal code" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group save"> 
+                        <input name="input" type="checkbox">
+                        <label>Save this information for next time</label><br/>
+                    </div>
+
+                    <button type="submit">Continue</button>
+                </form>
+
+                <div class="checkout-summary">
+                    <div class="summary-details">
+                        <div class="details-content image">
+                            <img src="assets/photo1.png" alt="backpack">
+                        </div>
+
+                        <div class="details-content">
+                            <div class="content-text">
+                                <h4>Vintage Backbag</h4>
+                                <p>$54.99 &nbsp <span>$94.99</span></p>
+                            </div>
+
+                            <div class="content-text amount">
+                                <span class="material-icons remove" data-name="first-control-group">remove</span>
+                                <span class="span-amount" data-name="first-control-group">1</span>
+                                <span class="material-icons add" data-name="first-control-group">add</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-details">
+                        <div class="details-content image">
+                            <img src="assets/photo2.png" alt="backpack">
+                        </div>
+
+                        <div class="details-content">
+                            <div class="content-text">
+                                <h4>Levi Shoes </h4>
+                                <p>$74.99 &nbsp <span>$124.99</span></p>
+                            </div>
+
+                            <div class="content-text amount">
+                                <span class="material-icons remove" data-name="second-control-group">remove</span>
+                                <span class="span-amount" data-name="second-control-group">1</span>
+                                <span class="material-icons add" data-name="second-control-group">add</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="summary-details shipping">
+                        <div class="shipping-details">
+                            <h3>Shipping</h3>
+                            <p>$19</p>
+                        </div>
+
+                        <div class="shipping-details">
+                            <h3>Total</h3>
+                            <p>$148.98</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p><a href="https://devchallenges.io/profile/Q5qWB31yUStCuJkz3DpU">wenadev</a> @ DevChallenges.io</p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
