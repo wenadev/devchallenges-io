@@ -18,16 +18,16 @@
     <body>
         <div class="root-container">
             <div class="view">
-                <div class="view-body">
+                <div class="view-body" id="home">
                     <header>
                         <p>Edie</p>
         
                         <nav>
-                            <p class="nav-elements web active">Home</p>
-                            <p class="nav-elements web">Services</p>
-                            <p class="nav-elements web">Our Works</p>
-                            <p class="nav-elements web">Clients</p>
-                            <p class="nav-elements web">Contact</p>
+                            <p class="nav-elements web"><a href="#home">Home</a></p>
+                            <p class="nav-elements web"><a href="#services">Services</a></p>
+                            <p class="nav-elements web"><a href="#our-works">Our Works</a></p>
+                            <p class="nav-elements web"><a href="#clients">Clients</a></p>
+                            <p class="nav-elements web"><a href="#contact">Contact</a></p>
                             
                             <!--hamburger menu hidden by default, visible in mobile view-->
                             <i class="material-icons menu md-36" alt="Menu button">menu</i></nav>
@@ -55,7 +55,7 @@
                                 </div> 
                     </section>
 
-                           <section class="section-content second">
+                           <section class="section-content second" id="services">
                                 <p id="sixth-text">We offer high <br/> demand services</p>
     
                                 <div class="content-second">
@@ -86,7 +86,7 @@
                            </section>
     
     
-                           <section class="section-content third">
+                           <section class="section-content third" id="our-works">
                                 <p id="seventh-text">Good design means <br/> good business</p>
     
                                 <div class="content-third">
@@ -145,13 +145,13 @@
                                 </div>
                            </section>
     
-                           <section class="section-content fifth">
-                               <div class="fifth-details">
+                           <section class="section-content fifth" id="clients">
+                               <div class="fifth-details one">
                                     <p>“Fast and outstanding results. Edie understands their 
                                     customer’s needs. They have a young and talented team.” </p>
                                </div>
     
-                               <div class="fifth-details">
+                               <div class="fifth-details two">
                                     <div>
                                         <img src="assets/person4.png">
                                     </div>
@@ -164,13 +164,13 @@
                            </section>
                     </div>
                 
-                <section class="section-content sixth">
+                <section class="section-content sixth" id="contact">
                            <div class="sixth-details one">
-                               <p>Home</p>
-                               <p>Services</p>
-                               <p>Our Works</p>
-                               <p>Clients</p>
-                               <p>Contact</p>
+                                <p><a href="#home">Home</a></p>
+                                <p><a href="#services">Services</a></p>
+                                <p><a href="#our-works">Our Works</a></p>
+                                <p><a href="#clients">Clients</a></p>
+                                <p><a href="#contact">Contact</a></p>
                            </div>
 
                            <div class="sixth-details two">
@@ -204,11 +204,11 @@
                 </div>
 
                 <div class="nav-elements-container">
-                    <p class="nav-elements mobile active">Home</p>
-                    <p class="nav-elements mobile">Services</p>
-                    <p class="nav-elements mobile">Our Works</p>
-                    <p class="nav-elements mobile">Clients</p>
-                    <p class="nav-elements mobile">Contact</p>
+                    <p class="nav-elements mobile" data-href="home"><a href="#home">Home</a></p>
+                    <p class="nav-elements mobile" data-href="services"><a href="#services">Services</a></p>
+                    <p class="nav-elements mobile" data-href="our-works"><a href="#our-works">Our Works</a></p>
+                    <p class="nav-elements mobile" data-href="clients"><a href="#clients">Clients</a></p>
+                    <p class="nav-elements mobile" data-href="contact"><a href="#contact">Contact</a></p>
                 </div>
             </div>
         </div>
