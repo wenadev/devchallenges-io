@@ -8,7 +8,7 @@
 
 ## Responsive
 
-These are responsive solutions built with HTML, CSS & JAVASCRIPT. 
+These are responsive solutions built with HTML, CSS & Javascript. 
 
 ## Front-End
 
