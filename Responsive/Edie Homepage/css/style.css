@@ -70,28 +70,19 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:#333333;
 }@media screen and (max-width: 1100px) {
     nav{
         width:initial;
     }
 }
 
+p a{text-decoration: none; color:#333333;}
+
 nav p.nav-elements.web{
     font-size: 0.95rem;
 }
 
-.nav-elements.web.active{
-    background-color: #2D9CDB;
-    color:white;
-    cursor: pointer;
-    border:1px solid #2D9CDB;
-    padding:8px 13px;
-    border-radius: 5px;
-}
-
-/*active navigation element*/
-.root-container .nav-elements.web:not(.active):hover{
+.root-container .nav-elements.web:hover{
     cursor: pointer;
     border-bottom: 3px dotted #2D9CDB;
 }
@@ -116,19 +107,25 @@ nav p.nav-elements.web{
 .section-content.first{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 40px 0 60px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 25px 0 0 0;
+}@media screen and (max-width: 700px) {
+    .section-content.first{
+        height:75vh;
+        padding: 25px 0 20px 0;
+    }
 }
 
 /*Unhappy with your website?*/
 .section-content.first p#first-text{
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     color:#2D9CDB;
-    margin-bottom: 10px;
+   
 }@media screen and (max-width: 700px) {
     .section-content.first p#first-text{
-        font-size: 2.3vw;
         padding-left: 5vw;
     }
 }
@@ -146,8 +143,8 @@ Good design means good business,
 .fourth-details p:nth-child(2)
 {
     font-weight: 500;
-    font-size: 34px;
-    margin-bottom: 20px;
+    font-size: 36px;
+   
 }@media screen and (max-width: 700px) {
     .section-content.first p#second-text, 
     .section-content.first p#third-text,
@@ -156,7 +153,7 @@ Good design means good business,
     .fourth-details p:nth-child(2),
     .section-content.fifth div:nth-child(1) p
     {
-        font-size: 6vw;
+        font-size: 30px;
         padding-left: 5vw;  
     }
 }
@@ -172,7 +169,6 @@ Good design means good business,
     justify-content: center;
     align-items: center;
     background-origin: content-box;
-    margin-bottom: 25px;
 }
 
 /*images in 'Meet the team'*/
@@ -192,21 +188,24 @@ goals in short period of time.*/
     font-weight: 400;
     font-size: 14px;
     width:40%;
-    margin-bottom: 25px;
+ 
 }@media screen and (max-width: 700px) {
     .section-content.first p#fourth-text{
         width:auto;
-        font-size: 2.5vw;
         padding-left: 5vw;    }
 }
 
 /*input field in frist section*/
 .section-content.first .contact {
-   padding-left: 12vw;
+    width: 50%;
+   margin-left: 12vw;
 }@media screen and (max-width: 1100px) {
     .section-content.first .contact{
-        padding-left: 5vw;
-        width:100%;
+        margin-left: 5vw; 
+    }
+}@media screen and (max-width: 700px) {
+    .section-content.first .contact{
+        width: 100%;
     }
 }
 
@@ -216,10 +215,15 @@ goals in short period of time.*/
     font-size: 12px;
     color:#828282;
     align-self: start;
-    margin-bottom: 8px;
+    
 }@media screen and (max-width: 700px) {
     .section-content.first p#fifth-text{
         padding-left: 5vw;
+        margin-bottom: 20px;
+    }
+}@media screen and (min-width: 700px) {
+    .section-content.first p#fifth-text{
+        margin-bottom: auto;
     }
 }
 
@@ -228,12 +232,12 @@ goals in short period of time.*/
     border: none;
     padding: 10px 7px ;
     border-radius: 7px;
-    min-width: 45%;
+    min-width: 60%;
     outline: none;
 }@media screen and (max-width: 700px) {
-    input{
+    .section-content.first .contact input{
         padding-left: 5vw;
-        width:80%;
+        width:75%;
     }
 }
 
@@ -253,7 +257,7 @@ goals in short period of time.*/
     outline: none;
 }
 
-.section-content.second{padding-top:60px; height: auto;}
+.section-content.second{padding-top: 20px; min-height: 90vh;display: flex;flex-direction: column; justify-content: space-evenly;}
 
 /*all p elements in 'We offer high demand services'*/
 .section-content.second p{padding: 0;}
@@ -264,6 +268,10 @@ goals in short period of time.*/
 {
     padding:30px 0 0 ;  
     margin-bottom: 0;
+}@media screen and (max-width: 700px) {
+    .section-content.second p#sixth-text {
+        text-align: center;
+    }
 }
 
 .content-second{
@@ -357,7 +365,7 @@ goals in short period of time.*/
     background: #EB5757;
 }
 
-.section-content.third{padding-top: 60px;}
+.section-content.third{min-height:90vh; display: flex; flex-direction: column;  justify-content: space-around; padding:0px 0 40px;}
 
 .content-third{
     display:grid;
@@ -402,7 +410,7 @@ goals in short period of time.*/
 
 /*first and third images in 'Good design means good business' section*/
 .third-details.one, .third-details.three{
-    padding-top: 100px;
+    padding-top: 80px;
 }@media screen and (max-width: 700px) {
     .third-details.one, .third-details.three{padding-top: 30px;}
 
@@ -436,7 +444,8 @@ goals in short period of time.*/
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 60px 0;
+    min-height:90vh;
+    padding:0px 0 40px;
 }
 
 /*Meet the team in fourth section and images adjacent and below in fourth section*/
@@ -470,7 +479,7 @@ goals in short period of time.*/
 }
 
 /*We are chilled and a laidback team*/
-.fourth-details p:nth-child(2){width:75%;}@media screen and (max-width: 700px) {
+.fourth-details p:nth-child(2){width:75%; margin-bottom: 30px;}@media screen and (max-width: 700px) {
     .fourth-details p:nth-child(2){
         width:80%;
         text-align: center;
@@ -514,18 +523,23 @@ div.image img{border-radius: 10px;}
 .fourth-image :nth-child(3){grid-column:2/3;}
 
 .section-content.fifth{
-   min-height: 45vh;
+   min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px 0;
+    padding: 0px 0;
+
+}@media screen and (max-width:1100px){
+    .section-content.fifth{min-height:;}
 }
 
 .fifth-details{
     display: flex; 
-    justify-content: center; 
+    justify-content: space-evenly; 
     align-items: center;
 }
+
+.fifth-details.two{justify-content: center;}
 
 /*Fast and outstanding results. 
 Edie understands their customer’s needs. 
@@ -536,14 +550,10 @@ They have a young and talented team.*/
     font-size: 30px;
     color: #333333;
     text-align: center;
-}@media screen and (max-width: 500px) {
-    .section-content.fifth div:nth-child(1) p{
-        font-size: 20px;
-    }
 }
 
 /*picture of reviewer, name and position in fifth section*/
-.fifth-details div:nth-child(2) p{padding-left: 30px;}@media screen and (max-width: 1100px) {
+.fifth-details div:nth-child(2) p{ padding-left: 30px;}@media screen and (max-width: 1100px) {
     .fifth-details div:nth-child(2){
         padding-top: 0px;
     }
@@ -551,18 +561,13 @@ They have a young and talented team.*/
 
 /*Carlos Tran image in fifth section*/
 .fifth-details div:nth-child(1) {
-    height: 90px;
-    width:90px;
+    height: 120px;
+    width:120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-origin: content-box;
-}@media screen and (max-width: 500px) {
-    .fifth-details div:nth-child(1){
-        height: 55px;
-        width:55px;
-    }
 }
 
 .fifth-details div:nth-child(1) img{
@@ -579,10 +584,6 @@ They have a young and talented team.*/
     font-size: 18px;
     color: #333333;
     line-height: 36px;
-}@media screen and (max-width: 500px) {
-    .fifth-details div:nth-child(2) p:nth-child(1){
-        font-size: 16px;
-    }
 }
 
 /*The Decorate Gatsby text*/
@@ -591,10 +592,6 @@ They have a young and talented team.*/
     font-size: 14px;
     color: #828282;
     line-height: 27px;
-}@media screen and (max-width: 500px) {
-    .fifth-details div:nth-child(2) p:nth-child(2){
-        font-size: 12px;
-    }
 }
 
 .section-content.sixth{
@@ -602,7 +599,7 @@ They have a young and talented team.*/
     align-items: center;
     background-color: #100E1D;
     color:white;
-    min-height: 20vh;
+    min-height: 30vh;
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 30px;
@@ -628,7 +625,12 @@ They have a young and talented team.*/
 
 /*breakdown of Home, Services Our Works, Clients, Contact*/
 .sixth-details.one{justify-content: space-evenly;}
-.sixth-details.one p{padding-left:0; font-size: 16px;}
+
+.sixth-details.one p{padding-left:0; font-size: 16px; }
+
+.sixth-details.one p a:hover{color: #2D9CDB;}
+
+.sixth-details.one p a{color: #F2F2F2;}
 
 /*Edie in sixth section*/
 .sixth-details.two p{padding-left:0;margin-bottom: 10px;font-family: 'Heebo'; font-weight: 800; font-size:24px;}
@@ -735,21 +737,14 @@ footer p a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 80px;
     cursor: pointer;
     font-size: 0.95rem;
 }
 
 .mobile-nav .nav-elements-container p{margin:25px;}
 
-.mobile-nav .nav-elements-container .active{
-    color:#2D9CDB;
-    font-weight: bold;
-}
-
-.mobile-nav .nav-elements.mobile:not(.active):hover{
-    color:#2D9CDB;
-}
+.nav-elements-container p a:hover{color:#2D9CDB; font-weight: bold;}
 
 /*to animate the mobile menu when in view*/
 @-webkit-keyframes slide-left {
