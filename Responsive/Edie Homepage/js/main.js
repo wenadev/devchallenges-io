@@ -9,6 +9,9 @@ let navElements = Array.from(document.querySelectorAll(".nav-elements.web"));
 let mobileNav = document.querySelector(".mobile-nav");
 let clear = document.querySelector(".clear");
 
+//getting mobile nav elements
+let mobileNavElements = Array.from(document.querySelectorAll(".nav-elements.mobile"));
+
 //checks the width of the window as it is resized
 let windowResizeEvents = ()=>{
     mobileNav.style.transition= "0s";
@@ -36,6 +39,20 @@ let displayMobileNav = ()=>{
     mobileNav.style.animation="slide-left .3s ease-out";
     view.style.display="none";
     mobileNav.style.display= "initial";
+
+    mobileNavElements.forEach((mobileNavElement)=>{
+        mobileNavElement.addEventListener('click',()=>{
+            //get href link of relating 'a' tag embedded in 'p' tag
+            let sectionHref = mobileNavElement.dataset.href;
+
+            //close mobile nav
+            removeMobileNav();
+
+          
+            
+           window.scrollTo(0, document.getElementById(`${sectionHref}`).offsetTop)
+        })
+    });
 }
 
 //mobile navigation hides 
