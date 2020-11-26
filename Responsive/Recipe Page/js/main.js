@@ -17,17 +17,23 @@ let recipeInstructions = document.querySelector(".recipe-instructions");
             <p>Graham Cracker Crust</p>
 
             <div class="ingredient-group">
-                <input type="checkbox" id="ingredient-one" name="ingredient-one" value="graham cracker crumbs">
+                <div>
+                    <input type="checkbox" id="ingredient-one" name="ingredient-one" value="graham cracker crumbs">
+                </div>
                 <label for="ingredient-one"> 1 and 1/2 cups (150g) <span style= "font-weight: 700;">graham cracker crumbs</span> (about 10 full sheet graham crackers)</label><br>
             </div>
             
             <div class="ingredient-group">
+                    <div>
                     <input type="checkbox" id=" ingredient-two" name=" unsalted butter" value="Car">
+                    </div>
                     <label for=" unsalted butter<"> 5 Tablespoons (70g) <span style= "font-weight: 700;"> unsalted butter</span>, melted</label><br>
             </div>
             
             <div class="ingredient-group">
-                    <input type="checkbox" id="ingredient-three" name="granulated sugar" value="granulated sugar">
+                    <div>
+                        <input type="checkbox" id="ingredient-three" name="granulated sugar" value="granulated sugar">
+                    </div>
                     <label for="granulated sugar"> 1/4 cup (50g) <span style= "font-weight: 700;">  granulated sugar</span></label><br>
             </div>
         </div>`
@@ -38,38 +44,52 @@ let recipeInstructions = document.querySelector(".recipe-instructions");
             <p>Chocolate</p>
 
             <div class="ingredient-group">
+                <div>
                 <input type="checkbox" id="ingredient-four" name="cream cheese" value="cream cheese">
+                </div>
                 <label for="cream cheese">four 8-ounce blocks (904g) full-fat <span style= "font-weight: 700;"> cream cheese</span>, softened to room temperature</label><br>
             </div>
 
             <div class="ingredient-group">
+                <div>
                 <input type="checkbox" id=" ingredient-five" name="granulated sugar" value="granulated sugar">
+                </div>
                 <label for=" unsalted butter">1 cup (200g) <span style= "font-weight: 700;"> granulated sugar</span></label><br>
             </div>
 
             <div class="ingredient-group">
-                <input type="checkbox" id="ingredient-six" name="sour cream" value="sour cream">
+                <div>
+                    <input type="checkbox" id="ingredient-six" name="sour cream" value="sour cream">
+                </div>
             <label for="sour cream"> 1 cup (240g) full-fat <span style= "font-weight: 700;"> sour cream</span>, at room temperature</label><br>
             </div>
 
             <div class="ingredient-group">
+                <div>
                 <input type="checkbox" id="ingredient-seven" name="pure vanilla extract" value="pure vanilla extract">
+                </div>
                 <label for="pure vanilla extract"> 1 teaspoon <span style= "font-weight: 700;"> pure vanilla extract</span></label><br>
             </div>
 
             <div class="ingredient-group">
+                <div>
                 <input type="checkbox" id="ingredient-eight" name="fresh lemon juice" value="fresh lemon juice">
+                </div>
                 <label for="fresh lemon juice"> 2 teaspoons <span style= "font-weight: 700;">fresh lemon juice </span>(optional, but recommended)</span></label><br>
             </div>
 
             <div class="ingredient-group">
-                <input type="checkbox" id="ingredient-nine" name="eggs" value="eggs">
+                <div>
+                    <input type="checkbox" id="ingredient-nine" name="eggs" value="eggs">
+                </div>
                 <label for="eggs"> 3 large <span style= "font-weight: 700;">eggs</span>, at room temperature</label><br>
             </div>
             
             <div class="ingredient-group">
-                <input type="checkbox" id="ingredient-ten" name="suggestions" value="suggestions">
-                <label for="suggestions">topping suggestions:  <span style= "font-style: italic; font-weight:500">salted caramel, lemon curd, strawberry topping, chocolate ganache, 
+                <div>
+                    <input type="checkbox" id="ingredient-ten" name="suggestions" value="suggestions">
+                </div>
+                <label for="suggestions">topping suggestions:  <span style= "font-style: italic; font-weight:500; font-size:13.5px">salted caramel, lemon curd, strawberry topping, chocolate ganache, 
                 red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</span> (recipe in notes)</label><br>
             </div>
         </div>`
@@ -161,7 +181,7 @@ let resizeEvents = ()=>{
     else if(window.innerWidth > 811){
         //web cooking time comes into view and mobile cooking time hides
         mobilecookingHow.style.display="none";
-        cookingHow.style.display="initial";
+        cookingHow.style.display="inherit";
     }
 }
 
