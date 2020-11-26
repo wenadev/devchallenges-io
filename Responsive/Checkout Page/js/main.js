@@ -29,18 +29,24 @@ addButtons.forEach((addButton)=>{
 
 removeButtons.forEach((removeButton)=>{
     removeButton.addEventListener("click", ()=>{
-        span.forEach((itemQuantity)=>{
-             //check that amount to be decreased in html body must match the attributes of button group
-            if (itemQuantity.dataset.name === removeButton.dataset.name){
-                if (Number(itemQuantity.innerHTML) <= 50 && Number(itemQuantity.innerHTML > 0)){
-                    let decreaseButton = Number(itemQuantity.innerHTML) - 1;
+            span.forEach((itemQuantity)=>{
+                //check that amount to be decreased in html body must match the attributes of button group
+               if (itemQuantity.dataset.name === removeButton.dataset.name){
+                if (Number(itemQuantity.innerHTML) ==  1){
+                    alert("Your items must count at least 1!")
+                }
 
-                    if(decreaseButton > 1){
-                        itemQuantity.innerHTML = decreaseButton;
+                else{
+                    if (Number(itemQuantity.innerHTML) <= 50 && Number(itemQuantity.innerHTML > 0)){
+                        let decreaseButton = Number(itemQuantity.innerHTML) - 1;
+    
+                        if(decreaseButton >= 1){
+                            itemQuantity.innerHTML = decreaseButton;
+                        }
                     }
                 }
-            }
-        })
+               }
+           })
     });
 });
 
