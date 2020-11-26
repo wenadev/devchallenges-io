@@ -3,7 +3,7 @@
 
 html, body{margin:0; padding:0;}
 
-body{min-height:100vh;overflow-x: hidden;}
+body{min-height:100vh; overflow-x: hidden;}
 
 .root-container{
     display: flex;
@@ -36,6 +36,9 @@ body{min-height:100vh;overflow-x: hidden;}
         font-size: 5.5vw;
     }
 }
+    .recipe-title-picture #dots{
+      height:0px!important;
+    }
 
 /*Classic Cheesecake Recipe paragraph*/
 .recipe-title-picture span{
@@ -78,7 +81,7 @@ body{min-height:100vh;overflow-x: hidden;}
 .recipe-picture img{
     height:100%;
     width:100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
 
@@ -90,7 +93,7 @@ body{min-height:100vh;overflow-x: hidden;}
 
 .ingredient-details p{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     font-style: italic;
 
     color:#333333;
@@ -201,7 +204,6 @@ input, label{margin:8px; }
 /*Instructions paragraph*/
 .instruction-details{
     font-family: 'Montserrat';
-    font-size: 14px;
     font-weight: 400;
     display: flex;
     align-items: flex-start;
@@ -215,6 +217,7 @@ input, label{margin:8px; }
     line-height: 150%;
 }@media screen and (max-width: 811px) {
     .instruction-details p{
+        font-size: 13.5px!important;
         line-height: 130%;
     }
 }
@@ -239,6 +242,11 @@ input, label{margin:8px; }
 }@media screen and (max-width: 811px) {
     .recipe-body p#source{
         font-size: 12px;
+        text-align: center;
+    }
+}@media screen and (max-width: 500px) {
+    .recipe-body p#source{
+        font-size: 10px!important;
         text-align: center;
     }
 }
