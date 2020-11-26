@@ -14,6 +14,7 @@ html, body{
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    min-height:100%;
     padding: 0 20px;
 }
 
@@ -56,16 +57,19 @@ html, body{
     align-items: center;
     justify-content: center;
     margin: 5px;
+    padding: 35px;
 }
 
 .profile-metrics-details p {margin:2px; font-size: 13px; font-weight: 600; }@media screen and (max-width: 390px) {
-    .profile-metrics-details p{font-size: 3vw;}
+    .profile-metrics-details p{font-size: 2.5vw;}
+    .profile-metrics-details
 }
 
 .photo-view{
     flex:1 0 auto;
     height:auto;
     width:100%;
+    
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -75,13 +79,21 @@ html, body{
     align-items: center;
     background-origin: content-box;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
+}@media screen and (max-width: 400px) {
+    .photo-view {
+        grid-gap:10px;
+    }
 }
 
-.photo-view .photo{height:300px; width:100%;}
+.photo-view .photo{height:300px; ; width:100%;}
 @media screen and (max-width: 900px) {
     .photo-view .photo{
-        height:24.5vw;
+        height: 20vh;
+    }
+}@media screen and (max-width: 400px) {
+    .photo-view .photo{
+        max-height:100;
     }
 }
 
@@ -108,8 +120,7 @@ html, body{
 
 .photo.three{grid-column: 1/3;}
 
-.photo.four{grid-column:3/4; grid-row: 2/span 2; height:100%; border-radius: 20px;}
-
+.photo.four{min-height:300px; grid-column:3/4; grid-row: 2/span 2; border-radius: 20px;}
 .photo.five{grid-column:1/2;}
 
 .photo.six{grid-column:2/3;}
@@ -121,12 +132,7 @@ footer{
     align-items: center;
     font-family: 'Montserrat', sans-serif; 
     font-size: 0.8rem;
-     margin:15px 0 0 0;
-
-}@media screen and (max-width: 420px)  and (min-width: 375px){
-    footer{margin-top:48px; font-size: 0.6rem;}
-}@media screen and (max-width: 281px)  and (min-width: 280px){
-    footer{margin-top:70px; font-size: 0.6rem;}
+     margin:25px 0 0 0;
 }
 
 
