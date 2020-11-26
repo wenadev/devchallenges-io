@@ -76,6 +76,10 @@ form button{
     float: right;
     margin-top: 5px;
     cursor: pointer;
+}@media screen and (max-width:700px){
+    form button{
+        padding: 10px 20px;
+    }
 }
 
 /*Contact Information and Shipping Address*/
@@ -127,6 +131,7 @@ form .input-group {
     border-radius: 10px;
     margin-top: 8px;
     outline: none;
+    -webkit-appearance: textfield;
    
 } 
 
@@ -142,8 +147,9 @@ form .input-group {
 select{text-indent: 66px;}
 
 .checkout-body .checkout-summary{
-    width:40%;
-    height: 60%;
+    width:45%;
+    min-height: 60%;
+    height:auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -165,7 +171,7 @@ select{text-indent: 66px;}
     max-height:30%;
     height: auto;
     display: flex;
-    margin: 10px;
+    margin: 10px!important;
 }
 
 .details-content{
@@ -176,11 +182,18 @@ select{text-indent: 66px;}
 }
 
 .details-content.image{
-    max-height:160px;
-    max-width:160px;
+    max-height:140px;
+    height:auto;
+    max-width:140px;
+    width:auto;
     object-position:center; 
     object-fit: cover;
     margin-right: 20px;
+}@media screen and (max-width:520px){
+    .details-content.image{
+        width: 100px!important;
+        height: 100px!important;
+    }
 }
 .details-content.image img{height:100%; width:100%; border-radius: 16px;}
 
@@ -294,7 +307,8 @@ footer{
     flex-shrink: 0;
     height: 4vh;
     display: flex;
-    align-items: flex-end;
+    padding:20px;
+    align-items: center;
     font-family: 'Montserrat', sans-serif; 
     font-size: 0.8rem;
     border-top: 1px solid #BDBDBD;
@@ -303,7 +317,7 @@ footer{
 footer p{margin: 2px;}
 
 footer p a{
-    margin: 0; 
+   
     color:#e6af4c; 
     text-decoration: none;
 }
