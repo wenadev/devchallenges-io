@@ -48,8 +48,6 @@ let displayMobileNav = ()=>{
             //close mobile nav
             removeMobileNav();
 
-          
-            
            window.scrollTo(0, document.getElementById(`${sectionHref}`).offsetTop)
         })
     });
@@ -67,3 +65,20 @@ window.addEventListener('resize', windowResizeEvents);
 window.onbeforeunload = windowResizeEvents();
 
 clear.addEventListener('click', removeMobileNav);
+
+
+
+let scrollEvent = ()=>{
+
+    let header = document.querySelector("header");
+
+    if(Math.round(this.pageYOffset) > 10 ){
+        header.classList.add("fixed")
+    }
+    else if(Math.round(this.pageYOffset) < 10 ){
+
+        header.classList.remove("fixed")
+    }
+}
+
+window.addEventListener("scroll", scrollEvent);
