@@ -1,16 +1,16 @@
 html, body{
     margin: 0;
     padding: 0;
+    scroll-behavior:smooth;
 }
 
 
 .root-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    height:100%;
     overflow-x: hidden;
+    scroll-behavior:smooth;
 }
 
 .view{
@@ -27,27 +27,38 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color:black;
     padding:0 180px;
     overflow-y: hidden;
     overflow-x: hidden;
 }@media screen and (max-width: 1100px) {
     .view-body{
-        transition: .3s;
-        padding:0 30px;
+        padding:0 15px;
     }
-}
+} 
 
 /*navigation*/
 header{
     flex-shrink: 0;
-    height:7vh;
-    width: 100%;
+    height:30px;
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:15px 0;
+    padding:15px 25px;
+
+    background-color: white;
+    box-shadow: 5px 10px 25px rgba(51, 51, 51, 0.1);
+    -webkit-box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 5px 10px 25px rgba(51, 51, 51, 0.1);
+    -o-box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
+    box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
 }
+
+.fixed  {position:fixed;  transition: 1s; top:0}
+
+.fixed + .view-body{padding-top:65px;}
 
 header > p{
     font-family: 'Heebo',sans serif;
@@ -55,7 +66,7 @@ header > p{
     padding: 8px;
     font-weight: 800;
     color:#333333;
-}@media screen and (max-width: 00px) {
+}@media screen and (max-width: 700px) {
     header > p{
         font-size: 24px;
     }
@@ -72,7 +83,7 @@ nav{
     align-items: center;
 }@media screen and (max-width: 1100px) {
     nav{
-        width:initial;
+        width:inherit;
     }
 }
 
@@ -109,11 +120,11 @@ nav p.nav-elements.web{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100vh;
+    height: auto;
     padding: 25px 0 0 0;
 }@media screen and (max-width: 700px) {
     .section-content.first{
-        height:75vh;
+        height:auto;
         padding: 25px 0 20px 0;
     }
 }
@@ -129,6 +140,8 @@ nav p.nav-elements.web{
         padding-left: 5vw;
     }
 }
+
+.section-content.first p{margin-bottom: 15px;}
 
 /*We create beautifuland fast web services,
 Story, emotionand purpose,
@@ -153,7 +166,7 @@ Good design means good business,
     .fourth-details p:nth-child(2),
     .section-content.fifth div:nth-child(1) p
     {
-        font-size: 30px;
+        font-size: 26px;
         padding-left: 5vw;  
     }
 }
@@ -161,14 +174,17 @@ Good design means good business,
 /*image between 'We create beautifuland fast web services' and
 'Story, emotion and purpose',*/
 .section-content.first .image{
-    width:100%; 
-    height:300px; 
-    height: auto;
+    min-width:100%; 
+    height:auto; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-origin: content-box;
+}@media screen and (max-width: 700px) {
+    .section-content.first .image{
+        height:100px;
+    }
 }
 
 /*images in 'Meet the team'*/
@@ -192,7 +208,9 @@ goals in short period of time.*/
 }@media screen and (max-width: 700px) {
     .section-content.first p#fourth-text{
         width:auto;
-        padding-left: 5vw;    }
+        padding-left: 5vw;   
+        font-size: 12px;
+    }
 }
 
 /*input field in frist section*/
@@ -210,16 +228,18 @@ goals in short period of time.*/
 }
 
 /*Want us to contact you?*/
-.section-content.first p.fifth-text, .section-content.first p.sixth-text {
+.section-content.first p.fifth-text, .section-content.first p#sixth-text {
     font-weight: 500;
     font-size: 12px;
     color:#828282;
     align-self: start;
+    margin-bottom: 5px;
     
 }@media screen and (max-width: 700px) {
     .section-content.first p#fifth-text{
         padding-left: 5vw;
         margin-bottom: 20px;
+        font-size: 10px;
     }
 }@media screen and (min-width: 700px) {
     .section-content.first p#fifth-text{
@@ -236,7 +256,7 @@ goals in short period of time.*/
     outline: none;
 }@media screen and (max-width: 700px) {
     .section-content.first .contact input{
-        padding-left: 5vw;
+        padding-left: 3vw;
         width:75%;
     }
 }
@@ -252,12 +272,12 @@ goals in short period of time.*/
     padding:7px 18px;
     border: none;
     position: relative;
-    right:64.5;
+    right:64;
     cursor: pointer;
     outline: none;
 }
 
-.section-content.second{padding-top: 20px; min-height: 90vh;display: flex;flex-direction: column; justify-content: space-evenly;}
+.section-content.second{padding-top: 20px; height: auto;display: flex;flex-direction: column; justify-content: space-evenly;}
 
 /*all p elements in 'We offer high demand services'*/
 .section-content.second p{padding: 0;}
@@ -292,7 +312,7 @@ goals in short period of time.*/
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 20px ;
-    height:40vh;
+    min-height:300px;
 }@media screen and (max-width: 700px) {
     .content-second .second-details{
         align-items: center;
@@ -304,11 +324,11 @@ goals in short period of time.*/
 .content-second .second-details:hover{
     cursor: pointer;
     transition: .5s;
-    box-shadow: 5px 10px 25px rgba(51, 51, 51, 0.1);
-    -webkit-box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
-    -moz-box-shadow: 5px 10px 25px rgba(51, 51, 51, 0.1);
-    -o-box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
-    box-shadow:5px 10px 25px rgba(51, 51, 51, 0.1);
+    box-shadow: 5px 10px 20px rgba(51, 51, 51, 0.1);
+    -webkit-box-shadow:5px 10px 15px rgba(51, 51, 51, 0.1);
+    -moz-box-shadow: 5px 10px 15px rgba(51, 51, 51, 0.1);
+    -o-box-shadow:5px 10px 15px rgba(51, 51, 51, 0.1);
+    box-shadow:5px 10px 15px rgba(51, 51, 51, 0.1);
 }
 
 .content-second .second-details:hover >  button{
@@ -365,7 +385,7 @@ goals in short period of time.*/
     background: #EB5757;
 }
 
-.section-content.third{min-height:90vh; display: flex; flex-direction: column;  justify-content: space-around; padding:0px 0 40px;}
+.section-content.third{height:auto; display: flex; flex-direction: column;  justify-content: space-around; padding:0px 0 40px;}
 
 .content-third{
     display:grid;
@@ -389,16 +409,18 @@ goals in short period of time.*/
 
 /*images in 'Good design meansgood business' section*/
 .third-details div{ 
-    height: 300px;
+    min-height: 300px;
     width:100%;  
-    height: auto;
+    height:auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-origin: content-box;
-}
 
+}@media screen and (max-width: 700px) {
+    .third-details div{height: 400px;}
+}
 
 .third-details div img{
     height:100%; 
@@ -412,12 +434,12 @@ goals in short period of time.*/
 .third-details.one, .third-details.three{
     padding-top: 80px;
 }@media screen and (max-width: 700px) {
-    .third-details.one, .third-details.three{padding-top: 30px;}
+    .third-details.one, .third-details.three{padding-top: 20px;}
 
     /*in mobile sizing the card containing the images in
      'Good design meansgood business' section*/
     .third-details{
-        padding-top: 30px;
+        padding-top: 10px;
     }
 }
 
@@ -444,8 +466,8 @@ goals in short period of time.*/
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    min-height:90vh;
-    padding:0px 0 40px;
+    height:auto;
+    padding:10px 0 60px;
 }
 
 /*Meet the team in fourth section and images adjacent and below in fourth section*/
@@ -498,6 +520,7 @@ goals in short period of time.*/
 }@media screen and (max-width: 700px) {
     .fourth-image{
         padding-top:30px ;
+        grid-gap: 5px;
     }
 }
 
@@ -509,6 +532,8 @@ goals in short period of time.*/
     justify-content: center;
     align-items: center;
     background-origin: content-box;
+}@media screen and (max-width:700px){
+    .fourth-image div.image{max-height:200px;}
 }
 
 div.image img{border-radius: 10px;}
@@ -523,11 +548,11 @@ div.image img{border-radius: 10px;}
 .fourth-image :nth-child(3){grid-column:2/3;}
 
 .section-content.fifth{
-   min-height: 80vh;
+   min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0px 0;
+    padding: 30px 0;
 
 }@media screen and (max-width:1100px){
     .section-content.fifth{min-height:;}
@@ -547,7 +572,7 @@ They have a young and talented team.*/
 .section-content.fifth div:nth-child(1) p{
     padding-left: 0;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 26px;
     color: #333333;
     text-align: center;
 }
@@ -599,7 +624,7 @@ They have a young and talented team.*/
     align-items: center;
     background-color: #100E1D;
     color:white;
-    min-height: 30vh;
+    min-height: 20vh;
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(30%, 1fr));
     grid-gap: 30px;
@@ -712,7 +737,6 @@ footer p a{
     font-family: 'Montserrat', sans-serif;
     width:100%;
     height:100%;
-    transition: 1s;
     font-size: 0.95rem;
 }
 
@@ -721,10 +745,14 @@ footer p a{
 
 .mobile-nav .clear-button{
     height: 6vh;
-    padding: 16px 50px;
+    padding:7px 18px;
     display: flex;
     justify-content: flex-end;  
-}
+}@media screen and (max-width: 700px) {
+    .mobile-nav .clear-button {
+        padding:7px 14px;
+    }
+} 
 
 .mobile-nav .material-icons.clear.md-36 { 
     font-size: 36px; 
