@@ -7,15 +7,18 @@ html, body{
 .root-container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height:100%;
+    align-items: ;
+    min-height:100vh;
+    min-width: 100%;
     background-color:#181719;
+    color:white;
 }
 
 .view{
     align-self: start;
     background-color:#181719;
-    min-height: 100vh;
+    min-height: 100%;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,13 +26,14 @@ html, body{
     padding:0 80px;
 }@media screen and (max-width: 875px) {
     .view{
-        padding:0 30px;
+        min-height: 100vh!important;
+        padding:0 20px;
     }
 }
 
 header{
     flex-shrink: 0;
-    height:7vh;
+    height:5vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -43,10 +47,6 @@ header > p{
     font-size: 0.75rem;
     padding: 8px;
     border:1px solid white;
-}
-
-nav p.nav-elements.web{
-    font-size: 0.95rem;
 }
 
 nav{
@@ -84,40 +84,36 @@ nav{
 
 section{
     flex:1 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:auto;
     padding-top: 60px;
-    height:70%;
+    width: 100%;
 }@media screen and (max-width: 875px) {
     section {
-        align-items: unset;
         padding-top: 0;
     }
 }
 
 .section-container{
     width: 100%;
-    height:80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-}@media screen and (max-width: 875px) {
-    .section-container {
-        grid-template-columns: repeat(auto-fit, minmax(407px,1fr));
-    }
+    display:flex;
+    flex-wrap: wrap;
 }
 
 section .description{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width:40%;
+}@media screen and (max-width: 875px) {
+    section .description {
+        width:100%;
+        /*chnage*/
+    }
 }
 
 section .description p{margin: 0;}
 
 section .description div#break-down{
-    height: 100%;
     flex-direction: column;
     align-items: center;   
 }
@@ -174,10 +170,14 @@ section .picture{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width:60%
+}@media screen and (max-width: 875px) {
+    section .picture {
+        width:100%;
+    }
 }
 
 section .picture-div{
-    min-height:350px;
     height: auto;
     width: 100%;
     display: flex;
@@ -187,22 +187,22 @@ section .picture-div{
     background-origin: content-box;
 }@media screen and (max-width: 875px) {
     section .picture-div {
-        margin-top: 25px;
+        margin-top: 2em;
     }
 }
 
 section .picture-div img{
-   width: 100%;
-   height: 100%;
-   object-fit: contain;
-   object-position: center;
-   padding-bottom: 10px;
-}
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 10px;
+ }
 
-section .consultant-card{
+ section .consultant-card{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    width:30vw;
+    width:300px;
     height:auto;
     position: relative;
     right: 20;
@@ -211,21 +211,24 @@ section .consultant-card{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }@media screen and (max-width: 875px) {
     section .consultant-card {
-        width:70%;
-        position: relative;
-        bottom:80;
+        min-width:60%;
     }
 }
 
-section .profile{display: flex; align-items: center;}
+ section .profile{display: flex; align-items: center;}
 
 section .profile-pic{ 
-    height:47px;width:47px; 
+    height:47px;
+    width:47px; 
     margin:0 18px;
     border-radius: 50%;
-    background-image: url("../assets/photo2.png");
-    background-position: center;
-    background-size: cover;
+}
+
+section .profile-pic img{
+    position: relative;
+    border-radius: 50%;
+    height:100%;
+    width: 100%;
 }
 
 section .name {
@@ -256,8 +259,12 @@ section .design{
     margin:10px;
     margin-left: 18px;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 19px;
     letter-spacing: .5px;
+}@media screen and (max-width: 875px) {
+    .design > p{
+        font-size: 16px;
+    }
 }
 
 footer{
@@ -290,12 +297,11 @@ footer p a{
     flex-direction: column;
     align-items: flex-end;
     display: none;
-    
     font-family: 'Montserrat', sans-serif;
     background-color: #181719;
     width:100%;
-    height:100%;
-    transition: 1s;
+    min-height:100vh;
+    transition: .5s;
     font-size: 0.95rem;
 }
 
@@ -304,7 +310,7 @@ footer p a{
 
 .mobile-nav .clear-button{
     height: 6vh;
-    padding: 17px 50px;
+    padding: 17px 40px;
     display: flex;
     justify-content: flex-end;  
 }
@@ -320,9 +326,9 @@ footer p a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 130px;
+    margin-top: 40px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
 }
 
 .mobile-nav .nav-elements-container p{margin:25px;}
