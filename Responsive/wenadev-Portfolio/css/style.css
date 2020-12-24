@@ -233,9 +233,21 @@ section{
 
 .content.contact .material-icons:hover{color:#ffffff}
 
-.first-half , .second-half{ padding: 20px; display: flex; flex-direction: column;}
+.first-half , .second-half{ padding: 30px 15px; display: flex; flex-direction: column;}@media screen and (max-width:960px){
+    .first-half{
+        padding:30px;
+    }
 
-.profile, .hobbies, .challenges, .front-end, .testing, .second-half .project-content{
+    .second-half{
+        padding:30px 15px 30px 3px;
+    }
+}@media screen and (max-width:680px){
+    .second-half{
+        padding: 30px;
+    }
+}
+
+.profile, .hobbies, .challenges, .front-end, .testing, .second-half .project-content, #project-start, .blog-content, #blog-start{
     background:rgb(10,10,10,0.6); 
     padding:15px 20px 15px 20px; 
     border-radius: 10px; 
@@ -243,17 +255,17 @@ section{
 
 }
 
-.profile, .challenges{margin-bottom: 30px;}
-.projects{margin-top: 10px; } 
-#project-start{padding: 10px 5px 12px 5px;}
+.profile, .challenges{margin-bottom: 27px;}
+.projects, .blogs{margin-top: 10px; } 
+#project-start, #blog-start{padding: 10px 5px 12px 5px;}
 .projects .check{display: grid; gap: 25px;}
 
 
 .second-half .skills{
     display: grid;
-    grid-gap:20px;
+    grid-gap:27px;
    grid-template-columns: 1fr 1fr;
-   margin-bottom: 30px;
+   margin-bottom: 20px;
 }@media screen and (max-width:960px){
     .second-half .skills{
         grid-template-columns: 1fr;}
@@ -297,7 +309,7 @@ section{
 
 
 
-#challenges-title, #hobbies-title, #frontend-skills, #testing-skills, #projects-title{border-left:2.5px solid #e0aa39; padding-left:8px; line-height: 29px; font-weight: 600; font-size: 16px; margin-top: 10px}
+#challenges-title, #hobbies-title, #frontend-skills, #testing-skills, #projects-title, #blog-title{border-left:2.5px solid #e0aa39; padding-left:8px; line-height: 29px; font-weight: 600; font-size: 16px; margin-top: 10px}
 
 .first-half .challenges .challenges-content{border:1px solid transparent; display:flex; align-items: center; margin:10px 0}
 
@@ -361,9 +373,9 @@ section{
 
     }
 
-.second-half .projects{display:grid; grid-template-rows:1fr; grid-gap:20px;}
+.second-half .projects,.second-half .blogs{display:grid; grid-template-rows:1fr; grid-gap:27px;}
 
-.projects p{margin:9px;}
+.projects p, .blogs p{margin:9px;}
 
 
 .projects .button-selection{padding:5px 0 5px 20px; }
@@ -384,18 +396,17 @@ section{
 
 .activee{box-shadow: 2px 2px 5px black; border:2px solid #e0aa39!important;}
 
-.projects div#project-start{border-radius: 10px;}
+.projects div#project-start, .blogs div#blog-start{border-radius: 10px;}
 
-.project-content{
+.project-content, .blog-content{
     display: grid;
     grid-template-columns:1.8fr 2fr;
     grid-gap:20px;
     border-radius: 10px;
-    display:none;
     animation: animate .4s;
     padding:20px 20px!important;
 }@media screen and (max-width:1010px){
-    .project-content{
+    .project-content, .blog-content{
         grid-template-columns: 1fr;
     }
 }
@@ -406,11 +417,11 @@ section{
 
 .show{display:grid;}
 
-.projects div#project-start, .projects div.project-content{background: rgb(10,10,10,0.6);}
+.projects div#project-start, .projects div.project-content,.blogs .div#blog-start, .div.blog-content{background: rgb(10,10,10,0.6);}
 
 .projects .content-detail{display: flex; justify-content: space-evenly; flex-direction: column;}
 
-.project-content .image{
+.project-content .image, .blog-content .image{
     width:100%;  
     height: auto;
     display: flex;
@@ -420,7 +431,7 @@ section{
     background-origin: content-box;
 }
 
-.project-content .image img{
+.project-content .image img, .blog-content .image img{
     height:100%; 
     width:100%; 
     object-fit: contain; 
@@ -428,18 +439,18 @@ section{
     border-radius: 10px;
 }
 
-.project-content p{margin-bottom: 20px;}
+.project-content p, .blog-content p{margin-bottom: 20px;}
 
-.project-content p.filter-tags{font-size: 10px;color:rgb(255, 255, 255, 0.75);}
-.project-content p.content-title{font-weight: 600;}
-.project-content p.project-desc{color:rgb(255, 255, 255, 0.75); font-size: 14px;}
+.project-content p.filter-tags, .blog-content p.tag{font-size: 10px;color:rgb(255, 255, 255, 0.75);}
+.project-content p.content-title, .blog-content p.content-title{font-weight: 600;}
+.project-content p.project-desc, .blog-content p.project-desc{color:rgb(255, 255, 255, 0.75); font-size: 14px;}
 
-.project-content p.project-desc a{text-decoration: none; color:#5f5ffa}
-.project-content p.project-desc a:hover{color:#3535c7}
+.project-content p.project-desc a, .blog-content p.project-desc a{text-decoration: none; color:#5f5ffa}
+.project-content p.project-desc a:hover,  .blog-content p.project-desc a:hover{color:#3535c7}
 
-.project-content .demo-code {padding: 8px 0 0 5px; font-size: 13px;}
+.project-content .demo-code, .blog-content .read-article {padding: 8px 0 0 5px; font-size: 13px;}
 
-.project-content .demo-code button{
+.project-content .demo-code button, .blog-content .read-article button{
     font-size: 13px;
     color:white; 
     padding:8px 10px; 
@@ -463,6 +474,13 @@ button.demo{
 
  button.demo:hover{background: linear-gradient(to right, rgb(224, 170, 57, 0.8), rgb(244, 107, 69, 0.8))!important;}
 button.code:hover{background-color: rgb(10,10,10,0.3);}
+
+button.read:hover{
+    background: -webkit-linear-gradient(to right, #e0aa39, #f46b45)!important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e0aa39, #f46b45)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white;
+    transition: .1s;
+}
 
 /*styling the pagination buttons*/
 .simple-pagination ul {
