@@ -12,6 +12,43 @@ let clear = document.querySelector(".clear");
 //getting mobile nav elements
 let mobileNavElements = Array.from(document.querySelectorAll(".nav-elements.mobile"));
 
+let perPage=3;
+
+//determines number of project items to display
+let paginationResizeEvent = () =>{
+    /*if(innerWidth > 940){ perPage = 4; }
+
+    if(innerWidth <= 940){ perPage = 2;}
+*/
+    //pagination
+let items = $(".check .project-content");
+let numItems = items.length;
+
+items.slice(perPage).hide();
+
+$('#pagination-container').pagination({
+    items: numItems,
+    itemsOnPage: perPage,
+    prevText: "&laquo;",
+    nextText: "&raquo;",
+    onPageClick: function (pageNumber) {
+
+        let filterButtons = Array.from(document.querySelectorAll(".filter-button"));
+        
+        filterButtons.forEach(()=>{
+            let activeButton = document.querySelector(".activee").innerHTML;
+            filterSelection(activeButton);
+        });
+
+        let showFrom = perPage * (pageNumber - 1);
+        let showTo = showFrom + perPage;
+        items.hide().slice(showFrom, showTo).show();
+    }
+});
+}
+
+window.onbeforeunload = paginationResizeEvent();
+
 //checks the width of the window as it is resized
 let windowResizeEvents = ()=>{
     mobileNav.style.transition= "0s";
@@ -32,6 +69,8 @@ let windowResizeEvents = ()=>{
         });
         removeMobileNav();
     }
+
+    paginationResizeEvent();
 }
 
 //mobile navigation comes into view
@@ -97,7 +136,6 @@ clear.addEventListener('click', removeMobileNav);
         let activeButton = document.querySelector(".activee");
         activeButton.classList.remove("activee");
         button.classList.add("activee")
-        console.log(button.innerHTML)
         filterSelection(button.innerHTML);
     })
 })
@@ -127,31 +165,3 @@ let scrollEvent = ()=>{
 window.addEventListener("scroll", scrollEvent);
 
 
-var items = $(".check .project-content");
-    var numItems = items.length;
-    var perPage = 4;
-
-    items.slice(perPage).hide();
-
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-            let projectContent = Array.from(document.querySelectorAll(".project-content"));
-
-
-            let filterButtons = Array.from(document.querySelectorAll(".filter-button"));
-
-            filterButtons.forEach(()=>{
-                let activeButton = document.querySelector(".activee").innerHTML;
-                filterSelection(activeButton);
-            });
-
-
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });
