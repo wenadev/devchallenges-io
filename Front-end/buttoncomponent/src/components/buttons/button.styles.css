@@ -1,0 +1,78 @@
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 10px 15px 0;
+}
+
+.btn p{font-size: 11px; font-weight: 500!important; margin-bottom: 15px;}
+
+button{
+    border-radius:5px;
+    outline:none;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-family: 'Poppins';
+    letter-spacing: 0.3px;
+    margin-right:9vw ;
+}
+
+.default{background: #e0e0e0; color:#5e5e5e}
+.default:hover{background:#aeaeae; cursor:pointer; color:#575757}
+
+.primary{background: #2962ff; color:#ffffff}
+.primary:hover{background: #0039cb!important; cursor: pointer;}
+
+.secondary{background: #455a64; color:#ffffff}
+.secondary:hover{background:#1c313a!important; cursor: pointer; }
+
+.danger{background: #d32f2f; color:#ffffff}
+.danger:hover{background: #9a0007!important;  cursor:pointer}
+
+.variantText{background: none!important; border:none; color:#2962ff}
+.variantText:hover{background: #eaefff!important;  cursor: pointer;}
+.textHover:hover{background: none!important; cursor:not-allowed}
+
+.variantOutline{border:1px solid #2962ff; color:#2962ff}
+.variantOutline:hover{background: #eaefff; cursor:pointer }
+
+.btnShadow{box-shadow: 1px 1px 5px rgb(0, 0, 0,0.2);}
+
+.disabled{background:#e0e0e0; color:#b9b9b9; cursor:not-allowed}
+
+.btnSmall{padding:5px; height:30px; width:75px}
+
+.btnMid{padding:5px; height:35px; width:90px}
+
+.btnLarge{padding:5px; height:45px; width:97px; cursor:}
+
+.startIcon::before{
+    font-family: 'Material Icons Round';
+    font-size: 1rem;
+    content: 'add_shopping_cart';
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.endIcon::after{
+    font-family: 'Material Icons Round';
+    font-size: 1rem;
+    content: 'add_shopping_cart';
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.default-hover-focus{background:#aeaeae;color:#5e5e5e; cursor: default!important; }
+
+.outline-hover-focus{background: #eaefff; cursor: default!important;   }
+
+.text-hover-focus{background: #eaefff!important;   cursor: default!important; }
+
+.primary-hover-focus{background: #0039cb!important; cursor: default!important;  }
+
+.sec-hover-focus{background:#1c313a!important; cursor: default!important;  }
+
+.danger-hover-focus{background: #9a0007!important; cursor: default!important;  }

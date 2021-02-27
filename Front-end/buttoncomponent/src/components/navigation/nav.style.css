@@ -1,0 +1,30 @@
+.nav{
+    width:25%;
+    height:auto;
+    padding: 0 5vw;
+    background: #fafbfd;
+}@media screen and (max-width:500px){
+  .nav{width:35%; padding-right: 8vw;}
+}
+
+
+.nav-title{
+    text-align: left;
+    margin: 45px 0 120px 0;
+}
+
+.nav-title p{color:#393c4d; font-weight: 600; width:100%}
+
+.nav-title span{color:#f87051}
+
+.nav-options{
+    height:auto;
+}
+
+.nav-options ul{list-style-type: none; padding: 0;}
+
+ul li{font-size:15px; text-align: left; color:#b5b5b6; font-weight: 400; cursor:pointer; margin-bottom: 30px;}
+
+ul li:hover{color:#2b2f4d;}
+
+li.active{color:#2b2f4d; font-weight: 600;}

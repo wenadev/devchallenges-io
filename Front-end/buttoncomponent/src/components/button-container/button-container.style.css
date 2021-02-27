@@ -1,0 +1,24 @@
+.btn-container{
+    width:75%;
+    padding: 0 5vw;
+    margin-top: 30px;
+    height: auto;
+}@media screen and (max-width:500px){
+    .btn-container{width:50%}
+  }
+  
+
+.btn-container h2{font-size: 30px; font-weight: 400; text-align:  left;}
+
+.btn-container p,a{width:100%; font-size: 13px; text-align: left; color:#bbbbbb;}
+
+
+footer{align-self: center; }
+
+footer p{text-align: center; margin: 40px 0 10px 0;}
+
+footer p a{
+    margin: 0; 
+    color:#f87051; 
+    text-decoration: none;
+}
