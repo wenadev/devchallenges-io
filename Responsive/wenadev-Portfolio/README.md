@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://wenadev-portfolio.web.app/">
+    <a href="https://mawuena-hayes.web.app">
       Demo
     </a>
     <span> | </span>
